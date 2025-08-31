@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Games | Viberverse</title>
+    <title>Home - Google Drive</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="/media/logo.png" type="image/x-icon" />
   </head>
@@ -565,26 +565,6 @@
             game.style.display = "block";
           }
         });
-      });
-      const root = document.documentElement.style;
-      if (localStorage.getItem("theme") === "blue") {
-        root.setProperty("--primary-color", "#2A9FD6");
-        root.setProperty("--text-shadow", "#1d7096");
-      } else if (localStorage.getItem("theme") === "yellow") {
-        root.setProperty("--primary-color", "#ffea00");
-        root.setProperty("--text-shadow", "#817700");
-      }
-      document.addEventListener("keydown", (e) => {
-        let panicStorage = localStorage.getItem("panic");
-        let panicHref = localStorage.getItem("panicHref")
-          ? localStorage.getItem("panicHref")
-          : "https://google.com";
-        if (
-          (panicStorage && e.key === panicStorage) ||
-          (!panicStorage && e.key === "`")
-        ) {
-          window.location.href = panicHref;
-        }
       });
     </script>
   </body>
