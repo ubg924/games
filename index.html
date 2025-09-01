@@ -2,124 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - Google Drive</title>
-  <link rel="icon" href="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games | Unblocked Games</title>
+  <link rel="shortcut icon" href="/media/logo.png" type="image/x-icon" />
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: white;
     }
 
-    header {
-      background: #111;
-      padding: 1rem 2rem;
+    /* Navbar */
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #222;
+      padding: 20px 50px;
+      background-color: #0d0d0d;
+      border-bottom: 1px solid #222;
     }
 
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.8rem;
-      color: #0ff;
-    }
-
-    nav a {
-      margin-left: 20px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #0ff;
-    }
-
-    .hero {
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    .hero h2 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      color: #0ff;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-    .hero .btn {
-      padding: 1rem 2rem;
-      background: #0ff;
-      color: #000;
-      border: none;
-      font-size: 1rem;
+    .navbar .logo {
+      font-size: 28px;
       font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
+      color: cyan;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
       transition: 0.3s;
-      text-decoration: none;
-    }
-    .hero .btn:hover {
-      background: #00cccc;
     }
 
-    .quick-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 3rem auto;
-      flex-wrap: wrap;
+    .navbar .nav-links a:hover {
+      color: cyan;
     }
-    .quick-links a {
-      background: #1a1a1a;
-      padding: 1.5rem 2rem;
+
+    /* Page Content */
+    .wrap {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 42px;
+      color: cyan;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 18px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .input {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      margin-bottom: 40px;
+      background-color: #1a1a1a;
+      color: white;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+
+    /* Games Grid */
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .game {
+      display: block;
+      background-color: #1a1a1a;
       border-radius: 12px;
-      color: #fff;
-      font-weight: bold;
+      overflow: hidden;
       text-decoration: none;
+      color: white;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .quick-links a:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 15px #0ff;
+
+    .game:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
     }
 
-    footer {
-      background: #111;
+    .game-thumb {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-bottom: 1px solid #222;
+    }
+
+    .game-name {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      border-top: 2px solid #222;
+      color: cyan;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 1px solid #222;
+      font-size: 14px;
+      color: #777;
     }
   </style>
-  <body>
-    <header>
-      <h1>Unblocked Games</h1>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="/games">Games</a>
-      </nav>
-    </header>
-    <div class="wrap">
-      <h1 class="title">GAMES</h1>
-      <p class="description">
-        Browse our 200+ collection of some of the most popular web games ever.
-      </p>
-      <input type="text" class="input" id="search" placeholder="Search" />
-      <div class="games">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="/" class="logo">Unblocked Games</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="games.html">Games</a>
+    </div>
+  </div>
+
+  <!-- Games Page -->
+  <div class="wrap">
+    <h1 class="title">Games</h1>
+    <p class="description">Browse our 200+ collection of the most popular web games ever.</p>
+
+    <input type="text" class="input" id="search" placeholder="Search for a game..." />
+
+    <div class="games" id="gamesGrid">
+<div class="games">
         <a href="games/1v1-lol/" class="game">
           <img src="games/1v1-lol/splash.png" class="game-thumb" />
           1v1.LOL
@@ -623,29 +650,25 @@
           />
           World's Hardest Game
         </a>
-      </div>
     </div>
-  <footer>
-    <p>© 2025 ubg924 | Stay sneaky 😉</p>
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 Unblocked Games. All rights reserved.
   </footer>
-    <script>
-      const titleTag = document.getElementsByTagName("title")[0];
-      if (localStorage.getItem("tab-name")) {
-        titleTag.innerHTML = localStorage.getItem("tab-name");
-      }
-      const search = document.getElementById("search");
-      const games = document.querySelectorAll(".game");
-      search.addEventListener("keyup", () => {
-        games.forEach((game) => {
-          if (
-            !game.innerText.toLowerCase().includes(search.value.toLowerCase())
-          ) {
-            game.style.display = "none";
-          } else {
-            game.style.display = "block";
-          }
-        });
+
+  <script>
+    // Search filter
+    const search = document.getElementById("search");
+    const games = document.querySelectorAll(".game");
+
+    search.addEventListener("keyup", () => {
+      const query = search.value.toLowerCase();
+      games.forEach((game) => {
+        const name = game.innerText.toLowerCase();
+        game.style.display = name.includes(query) ? "block" : "none";
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
