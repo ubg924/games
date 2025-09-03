@@ -143,21 +143,19 @@
 
   </style>
   <script>
-    const allowedIP = "67.188.143.217"; // Replace with your IP
+  fetch("https://jsonip.com/")
+    .then(res => res.json())
+    .then(data => {
+      console.log("User IP:", data.ip);
+      // optional: still keep your beta lock
+      const allowedIP = "67.188.141.249"; // replace with yours
+      if (data.ip !== allowedIP) {
+        document.body.innerHTML = "<h1 style='font-family: Arial; color: cyan; text-align: center; margin-top: 20%;'>Sorry, site is in beta testing</h1>";
+      }
+    })
+    .catch(err => console.error("IP fetch failed:", err));
+</script>
 
-    fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => {
-        if (data.ip !== allowedIP) {
-          document.body.innerHTML = `
-            <div class="beta-message">
-              <h1>Sorry 🚫</h1>
-              <p>Site is in beta testing</p>
-            </div>
-          `;
-        }
-      })
-  </script>
 </head>
 <body>
   <!-- Navbar -->
