@@ -126,7 +126,41 @@
       font-size: 14px;
       color: #777;
     }
+
+    /* Beta message style */
+    .beta-message {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: cyan;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 2rem;
+      padding: 2rem;
+    }
+
   </style>
+  <script>
+    const allowedIP = "123.45.67.89"; // Replace with your IP
+
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        if (data.ip !== allowedIP) {
+          document.body.innerHTML = `
+            <div class="beta-message">
+              <h1>Sorry 🚫</h1>
+              <p>Site is in beta testing</p>
+            </div>
+          `;
+        }
+      })
+      .catch(err => {
+        console.error("IP check failed", err);
+      });
+  </script>
 </head>
 <body>
   <!-- Navbar -->
