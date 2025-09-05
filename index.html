@@ -6,46 +6,38 @@
   <title>Games | Unblocked Games</title>
   <link rel="shortcut icon" href="/media/logo.png" type="image/x-icon" />
   <style>
-    body {
+  body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: white;
+      font-family: 'Roboto', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
     }
 
-    /* Navbar */
-    .navbar {
+    header {
+      background: #111;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 50px;
-      background-color: #0d0d0d;
-      border-bottom: 1px solid #222;
+      border-bottom: 2px solid #222;
     }
 
-    .navbar .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: cyan;
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #0ff;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #fff;
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
     }
-
-    .navbar .nav-links {
-      display: flex;
-      gap: 20px;
+    nav a:hover {
+      color: #0ff;
     }
-
-    .navbar .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      transition: 0.3s;
-    }
-
-    .navbar .nav-links a:hover {
-      color: cyan;
-    }
-
     /* Page Content */
     .wrap {
       max-width: 1200px;
@@ -170,7 +162,7 @@
   <!-- Navbar -->
   <header class="nav">
     <div class="logo">
-      <h1 style="color:#00ffff; font-family:'Orbitron', sans-serif;">Unblocked Games</h1>
+      <h1>Unblocked Games</h1>
     </div>
     <nav>
       <a href="/index.html" class="nav-link">Home</a>
