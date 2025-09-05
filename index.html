@@ -38,24 +38,60 @@
     nav a:hover {
       color: #0ff;
     }
-    /* Page Content */
-    .wrap {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
+
+    header h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #0ff;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .quick-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem auto;
+      flex-wrap: wrap;
+    }
+    .quick-links a {
+      background: #1a1a1a;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .quick-links a:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    footer {
+      background: #111;
       text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      border-top: 2px solid #222;
     }
 
-    .title {
-      font-size: 42px;
-      color: cyan;
-      margin-bottom: 10px;
-    }
-
-    .description {
-      font-size: 18px;
-      color: #aaa;
-      margin-bottom: 30px;
+    /* Beta message style */
+    .beta-message {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      color: #0ff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 2rem;
+      padding: 2rem;
     }
 
     .input {
@@ -109,29 +145,6 @@
       color: cyan;
     }
 
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 1px solid #222;
-      font-size: 14px;
-      color: #777;
-    }
-
-    /* Beta message style */
-    .beta-message {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      color: cyan;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-size: 2rem;
-      padding: 2rem;
-    }
 
   </style>
   <script>
@@ -174,7 +187,7 @@
   <!-- Games Page -->
   <div class="wrap">
     <h1 class="title">Games</h1>
-    <p class="description">Browse our 200+ collection of the most popular web games ever.</p>
+    <p class="">Browse our 200+ collection of the most popular web games ever.</p>
 
     <input type="text" class="input" id="search" placeholder="Search for a game..." />
 
